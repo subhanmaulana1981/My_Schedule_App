@@ -6,7 +6,7 @@
 
     <item
         android:id="@+id/cmdAdd"
-        android:icon="@drawable/ic_menu_add"
+        android:icon="@drawable/ic_baseline_add_24"
         android:orderInCategory="100"
         android:title="Add Item"
         app:showAsAction="always" />

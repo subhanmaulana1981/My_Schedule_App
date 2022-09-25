@@ -30,6 +30,7 @@ public class ModifyCountryActivity extends Activity implements View.OnClickListe
         Button cmdUpdate = findViewById(R.id.cmdUpdate);
         Button cmdDelete = findViewById(R.id.cmdDelete);
 
+        // receive and extract the parameter
         Intent intent = getIntent();
         String id = intent.getStringExtra("id");
         String title = intent.getStringExtra("title");
@@ -60,6 +61,7 @@ public class ModifyCountryActivity extends Activity implements View.OnClickListe
         }
     }
 
+    // kembali ke form utama
     public void returnHome() {
         Intent home_intent = new Intent(
                 getApplicationContext(),

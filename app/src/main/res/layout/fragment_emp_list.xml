@@ -5,20 +5,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    tools:context=".CountryListActivity">
+    tools:context=".CountryListActivity"
+    android:padding="10dp">
 
-    <ListView
+    <RelativeLayout
+        android:id="@+id/rlCari"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/list_view"
-        android:dividerHeight="1dp"
-        android:padding="10dp"/>
+        >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/empty"
-        android:layout_centerInParent="true"
-        android:text="Empty List"/>
+        <SearchView
+            android:id="@+id/srcAgenda"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlKonten"
+        android:layout_below="@id/rlCari"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ListView
+            android:id="@+id/list_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:dividerHeight="1dp"
+            android:padding="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/empty"
+            android:layout_centerInParent="true"
+            android:text="Empty List"/>
+    </RelativeLayout>
 
 </RelativeLayout>

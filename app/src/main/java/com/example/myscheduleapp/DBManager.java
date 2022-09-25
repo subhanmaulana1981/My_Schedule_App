@@ -58,9 +58,35 @@ public class DBManager {
         if (cursor != null) {
             cursor.moveToFirst();
         }
+        return cursor;
+    }
+
+    public Cursor fetchBySubject(String _subject) {
+
+        String[] columns = new String[]{
+                DatabaseHelper._ID,
+                DatabaseHelper.SUBJECT,
+                DatabaseHelper.DESC
+        };
+
+        Cursor cursor = database.query(
+                DatabaseHelper.TABLE_NAME,
+                columns,
+                DatabaseHelper.SUBJECT + " LIKE ?",
+                new String[]{"%" + _subject + "%"},
+                null,
+                null,
+                null
+        );
+
+        if (cursor != null) {
+            cursor.moveToFirst();
+        }
 
         return cursor;
     }
+
+
 
     public int update(long _id, String name, String desc) {
         ContentValues contentValues = new ContentValues();
@@ -84,4 +110,5 @@ public class DBManager {
                 null
         );
     }
+
 }

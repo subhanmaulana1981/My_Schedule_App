@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">My Schedule App</string>
+    <string name="app_label">My Schedule App</string>
+    <string name="search_hint">Cari agenda di sini</string>
 </resources>

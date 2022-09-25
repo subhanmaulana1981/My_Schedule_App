@@ -42,6 +42,7 @@ public class AddCountryActivity extends Activity implements View.OnClickListener
                 final String desc = txtDesc.getText().toString();
                 dbManager.insert(title, desc);
 
+                // kembali ke home
                 Intent main = new Intent(
                         AddCountryActivity.this,
                         CountryListActivity.class)
